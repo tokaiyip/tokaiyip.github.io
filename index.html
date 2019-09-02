@@ -89,6 +89,9 @@
                     
 
                         
+                    
+
+                        
                         <li>
                             <a href="/tokaiyip.github.io/about/">About</a>
                         </li>
@@ -176,20 +179,23 @@
 
 <div class="post-preview">
 
-    <a href="/tokaiyip.github.io/2019/09/01/IMAPOST/">
+    <a href="/tokaiyip.github.io/2019/09/02/PHP两个变量a、b的值如何进行互换（不能用第三方变量）/">
         <h2 class="post-title">
-            IMAPOST
+            PHP两个变量a、b的值如何进行互换（不能用第三方变量）
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            ...
+            思路:将两个值想办法连起来再分开、使用某些数据结构或者函数进行变换。
+
+
+一、若变量为字符串1、先连接两个值再用substr()函数切割1234567$a = "this is a";$b = "this is b";echo '交换前a的值为'.$a.",".'b的值为'.$b.'&lt;br&gt;';$a .= $b;$b = substr($a,0,strlen($a)-strlen......
         </div>
     </a>
     <p class="post-meta">
         Posted by Kaiyip To on
-        2019-09-01
+        2019-09-02
     </p>
 
 </div>
@@ -277,8 +283,6 @@
                 </ul>
                 <p class="copyright text-muted">
                      &copy; Tokaiyip&#39;s Blog 2019
-                    <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a>
                     <br>
                     Photo by Jonathan Borba、Nattu Adnan、Joshua Earle on Unsplash
 
