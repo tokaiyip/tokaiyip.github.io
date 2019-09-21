@@ -97,14 +97,14 @@
 
                         
                         <li>
-                            <a href="/tokaiyip.github.io/about/">About</a>
+                            <a href="/tokaiyip.github.io/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tokaiyip.github.io/tags/">Tags</a>
+                            <a href="/tokaiyip.github.io/about/">About</a>
                         </li>
                         
                     
@@ -191,17 +191,8 @@
 
                 <blockquote><p>laravel生命周期简述</p>
 </blockquote>
-<p>#####Step1：收到请求进入index.php   </p>
-<p>#####Step2：index.php加载Composer生成定义的自动加载器   </p>
-<p>#####Step3：require bootstrap中的app.php   </p>
-<p>#####Step4：处理请求，将应用请求发送到http内核然后开始配置错误处理、日志记录、检测应用程序等任务等。   </p>
-<p>#####Step5：发送响应。   </p>
-<p>#####Step6：验证中间件。   </p>
-<p>###加载autoload:</p>
-<p>####require autoload_real文件</p>
-<p>#####autoload_real文件主要执行：<br>1、注册自动加载函数loadClassLoader主要目的是创建ClassLoader对象，然后unregister自动加载函数。<br>2、判断php版本是否大于或等于5.6、HHVM是否被定义、zend_loader_file_encode函数是否存在、判断文件是否被Zend Guard加密过。<br>3、如果php版本大于5.6、没有使用HHVM虚拟机、zend_loader_file_encode函数不存在且文件没被zend Guard加密过则进行对象loader静态初始化、否则调用核心类的接口进行初始化。<br>3.1、静态初始化首先require autoload_static文件然后回调执行getInitializer进行初始化。<br>3.2、普通加载通过调用分别require autoload_namespace、autoload_psr4、autoload_classmap进行初始化。<br>4、进行spl_autoload_register绑定loader对象初始化的内容。<br>5、如果php版本大于5.6、没有使用HHVM虚拟机、zend_loader_file_encode函数不存在且文件没被zend Guard加密过则对includeFiles变量进行赋值、否则使用autoload_file进行赋值。<br>6、循环require incluFiles中的文件。   </p>
-<p>###step3部分简述：</p>
-<p>####App.php<br>1、创建一个Application对象传入项目目录给构造函数。<br>1.1、Application类构造函数主要设置基础路径，然后注册一些基础绑定、基础服务、核心类的别名到容器里。<br>2、绑定三个重要的接口。   </p>
+<h5 id="Step1：收到请求进入index-php"><a href="#Step1：收到请求进入index-php" class="headerlink" title="Step1：收到请求进入index.php"></a>Step1：收到请求进入index.php</h5><h5 id="Step2：index-php加载Composer生成定义的自动加载器"><a href="#Step2：index-php加载Composer生成定义的自动加载器" class="headerlink" title="Step2：index.php加载Composer生成定义的自动加载器"></a>Step2：index.php加载Composer生成定义的自动加载器</h5><h5 id="Step3：require-bootstrap中的app-php"><a href="#Step3：require-bootstrap中的app-php" class="headerlink" title="Step3：require bootstrap中的app.php"></a>Step3：require bootstrap中的app.php</h5><h5 id="Step4：处理请求，将应用请求发送到http内核然后开始配置错误处理、日志记录、检测应用程序等任务等。"><a href="#Step4：处理请求，将应用请求发送到http内核然后开始配置错误处理、日志记录、检测应用程序等任务等。" class="headerlink" title="Step4：处理请求，将应用请求发送到http内核然后开始配置错误处理、日志记录、检测应用程序等任务等。"></a>Step4：处理请求，将应用请求发送到http内核然后开始配置错误处理、日志记录、检测应用程序等任务等。</h5><h5 id="Step5：发送响应。"><a href="#Step5：发送响应。" class="headerlink" title="Step5：发送响应。"></a>Step5：发送响应。</h5><h5 id="Step6：验证中间件。"><a href="#Step6：验证中间件。" class="headerlink" title="Step6：验证中间件。"></a>Step6：验证中间件。</h5><h3 id="加载autoload"><a href="#加载autoload" class="headerlink" title="加载autoload:"></a>加载autoload:</h3><h4 id="require-autoload-real文件"><a href="#require-autoload-real文件" class="headerlink" title="require autoload_real文件"></a>require autoload_real文件</h4><h5 id="autoload-real文件主要执行："><a href="#autoload-real文件主要执行：" class="headerlink" title="autoload_real文件主要执行："></a>autoload_real文件主要执行：</h5><p>1、注册自动加载函数loadClassLoader主要目的是创建ClassLoader对象，然后unregister自动加载函数。<br>2、判断php版本是否大于或等于5.6、HHVM是否被定义、zend_loader_file_encode函数是否存在、判断文件是否被Zend Guard加密过。<br>3、如果php版本大于5.6、没有使用HHVM虚拟机、zend_loader_file_encode函数不存在且文件没被zend Guard加密过则进行对象loader静态初始化、否则调用核心类的接口进行初始化。<br>3.1、静态初始化首先require autoload_static文件然后回调执行getInitializer进行初始化。<br>3.2、普通加载通过调用分别require autoload_namespace、autoload_psr4、autoload_classmap进行初始化。<br>4、进行spl_autoload_register绑定loader对象初始化的内容。<br>5、如果php版本大于5.6、没有使用HHVM虚拟机、zend_loader_file_encode函数不存在且文件没被zend Guard加密过则对includeFiles变量进行赋值、否则使用autoload_file进行赋值。<br>6、循环require incluFiles中的文件。   </p>
+<h3 id="step3部分简述："><a href="#step3部分简述：" class="headerlink" title="step3部分简述："></a>step3部分简述：</h3><h4 id="App-php"><a href="#App-php" class="headerlink" title="App.php"></a>App.php</h4><p>1、创建一个Application对象传入项目目录给构造函数。<br>1.1、Application类构造函数主要设置基础路径，然后注册一些基础绑定、基础服务、核心类的别名到容器里。<br>2、绑定三个重要的接口。   </p>
 
 
                 <hr>
