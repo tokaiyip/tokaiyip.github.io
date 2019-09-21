@@ -90,14 +90,14 @@
 
                         
                         <li>
-                            <a href="/tokaiyip.github.io/about/">About</a>
+                            <a href="/tokaiyip.github.io/archives/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tokaiyip.github.io/archives/">Archives</a>
+                            <a href="/tokaiyip.github.io/about/">About</a>
                         </li>
                         
                     
@@ -197,7 +197,8 @@
 <h3 id="二、若变量为数字"><a href="#二、若变量为数字" class="headerlink" title="二、若变量为数字"></a>二、若变量为数字</h3><p>1、使用运算进行互换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$a</span> = 5;</span><br><span class="line"><span class="variable">$b</span> = 3;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'交换前a的值为'</span>.<span class="variable">$a</span>.<span class="string">","</span>.<span class="string">'b的值为'</span>.<span class="variable">$b</span>.<span class="string">'&lt;br&gt;'</span>;</span><br><span class="line"><span class="variable">$a</span> = <span class="variable">$a</span> + <span class="variable">$b</span>;</span><br><span class="line"><span class="variable">$b</span> = <span class="variable">$a</span> - <span class="variable">$b</span>;</span><br><span class="line"><span class="variable">$a</span> = <span class="variable">$a</span> - <span class="variable">$b</span>;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'交换后a的值为'</span>.<span class="variable">$a</span>.<span class="string">","</span>.<span class="string">'b的值为'</span>.<span class="variable">$b</span>;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h3 id="note"><a href="#note" class="headerlink" title="note:"></a>note:</h3><ul>
-<li>substr(string,start,length):返回字符串的一部分，第三个参数可选。*  </li>
+<li>substr(string,start,length):返回字符串的一部分，第三个参数可选。若要截取中文字符则要用mb_substr()。</li>
+<li></li>
 <li>strlen(string):返回字符串长度。*  </li>
 <li>str_replace(find,replace,string,count):以其他字符替换字符串中的一些字符，第四个参数可选。*  </li>
 <li>list():语言结构，把数组中的值赋给一组变量，注意如果是对数组进行操作例如list($a[],[]) = [1,2]在php7以前是从右边开始复制，php7以后是左边开始。*  </li>
@@ -210,6 +211,10 @@
                 
 
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/tokaiyip.github.io/2019/09/21/Laravel生命周期/" data-toggle="tooltip" data-placement="top" title="Laravel生命周期">&larr; Previous Post</a>
+                        </li>
                     
                     
                 </ul>
